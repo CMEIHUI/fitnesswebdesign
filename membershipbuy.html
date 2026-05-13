@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plan | New Era Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/membershipbuy.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav_logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/111317/f9ac54?text=New+Era';"></a>
+            </div>
+            <ul class="nav_links">
+                <li class="link"><a href="membership.html">MEMBERSHIP</a></li>
+                <li class="link"><a href="personaltraining.html">PERSONAL TRAINING</a></li>
+                <li class="link"><a href="classes.html">CLASSES</a></li>
+                <li class="link"><a href="employeewellness.html">EMPLOYEE WELLNESS</a></li>
+                <li class="link"><a href="franchise.html">OWN A GYM</a></li>
+            </ul>
+            <a href="JoinUsNow.html" class="btn">Join Us Now!</a>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content: Purchase Flow -->
+    <main>
+        <div class="purchase-container">
+            <!-- Stepper -->
+            <div class="stepper-wrapper">
+                <div class="stepper-line"><div class="stepper-line-progress"></div></div>
+                <div class="stepper-item active" data-step="1">
+                    <div class="step-counter"><i class="ri-map-pin-line"></i></div>
+                    <div class="step-name">YOUR CLUB</div>
+                </div>
+                <div class="stepper-item" data-step="2">
+                    <div class="step-counter"><i class="ri-file-list-3-line"></i></div>
+                    <div class="step-name">YOUR PLAN</div>
+                </div>
+                <div class="stepper-item" data-step="3">
+                    <div class="step-counter"><i class="ri-user-line"></i></div>
+                    <div class="step-name">YOUR DETAILS</div>
+                </div>
+                <div class="stepper-item" data-step="4">
+                    <div class="step-counter"><i class="ri-bank-card-line"></i></div>
+                    <div class="step-name">PAYMENT</div>
+                </div>
+            </div>
+
+            <!-- Form Steps -->
+            <form id="purchase-form">
+                <!-- Step 1: Select Location -->
+                <div class="form-step active" data-step="1">
+                    <h2 class="step-header"><span>1.</span> Select Your Preferred Club</h2>
+                    <div class="location-search">
+                        <input type="text" id="location-search-input" placeholder="Enter a location to search...">
+                    </div>
+                    <div class="location-list">
+                        <div class="location-item" data-location="New Era Fitness - Rawang">
+                            <div class="location-details">
+                                <h3>New Era Fitness - Rawang</h3>
+                                <p>Pusat Komersial Anggun City, 1, Jalan Anggun City 1, Taman Anggun, 48000 Rawang, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                        <div class="location-item" data-location="New Era Fitness - Selayang">
+                             <div class="location-details">
+                                <h3>New Era Fitness - Selayang</h3>
+                                <p>LG-51, Lower Ground Floor, 168 Park Selayang, Jln Kuching, 68100 Batu Caves, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                        <div class="location-item" data-location="New Era Fitness - Melawati">
+                             <div class="location-details">
+                                <h3>New Era Fitness - Melawati</h3>
+                                <p>Wisma LJT, 7, Lorong Perak, Taman Melawati, 53100 Kuala Lumpur, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                        <div class="location-item" data-location="New Era Fitness - Cheras">
+                             <div class="location-details">
+                                <h3>New Era Fitness - Cheras</h3>
+                                <p>02-11, Cheras Traders Park, Jln Dataran Cheras 7, 43200 Cheras, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                        <div class="location-item" data-location="New Era Fitness - Puchong">
+                             <div class="location-details">
+                                <h3>New Era Fitness - Puchong</h3>
+                                <p>Lot 21, 2, Rio Exchange IOI Rio, Lebuh Puteri, Bandar Puteri, 47100 Puchong, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                        <div class="location-item" data-location="New Era Fitness - Kajang">
+                             <div class="location-details">
+                                <h3>New Era Fitness - Kajang</h3>
+                                <p>Blok B&C, Lot, 5, Seksyen 10, Jalan Bukit, Taman Bukit Mewah, 43000 Kajang, Selangor</p>
+                            </div>
+                            <button type="button" class="btn select-location-btn">Select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Plan -->
+                <div class="form-step" data-step="2">
+                    <h2 class="step-header"><span>2.</span> Select Your Plan</h2>
+                    <div class="plan-grid">
+                        <div class="plan-card" data-plan="Basic">
+                            <h3>BASIC</h3>
+                            <div class="plan-price">RM100<span>/mo</span></div>
+                            <ul class="plan-features">
+                                <li><i class="ri-check-line"></i> Access to 1 Club</li>
+                                <li><i class="ri-check-line"></i> Standard Gym Equipment</li>
+                                <li><i class="ri-close-line"></i> Group Classes</li>
+                                <li><i class="ri-close-line"></i> Personal Trainer</li>
+                            </ul>
+                            <button type="button" class="btn select-plan-btn">Select Plan</button>
+                        </div>
+                        <div class="plan-card" data-plan="Premium">
+                            <h3>Premium Pro</h3>
+                            <div class="plan-price">Rm200<span>/mo</span></div>
+                            <ul class="plan-features">
+                                <li><i class="ri-check-line"></i> Access to All Clubs</li>
+                                <li><i class="ri-check-line"></i> All Gym Equipment</li>
+                                <li><i class="ri-check-line"></i> Unlimited Group Classes</li>
+                                <li><i class="ri-close-line"></i> Personal Trainer</li>
+                            </ul>
+                            <button type="button" class="btn select-plan-btn">Select Plan</button>
+                        </div>
+                        <div class="plan-card" data-plan="VIP">
+                            <h3>VIP Elite</h3>
+                            <div class="plan-price">RM500<span>/mo</span></div>
+                            <ul class="plan-features">
+                                <li><i class="ri-check-line"></i> Access to All Clubs</li>
+                                <li><i class="ri-check-line"></i> All Gym Equipment</li>
+                                <li><i class="ri-check-line"></i> Unlimited Group Classes</li>
+                                <li><i class="ri-check-line"></i> 4x Personal Trainer Sessions</li>
+                            </ul>
+                            <button type="button" class="btn select-plan-btn">Select Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Membership Details -->
+                <div class="form-step" data-step="3">
+                    <h2 class="step-header"><span>3.</span> Member Details</h2>
+                    <div class="details-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment -->
+                <div class="form-step" data-step="4">
+                    <h2 class="step-header"><span>4.</span> Payment Method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option selected" data-payment="card">
+                            <i class="ri-bank-card-fill"></i>
+                        </div>
+                        <div class="payment-option" data-payment="paypal">
+                           <i class="ri-paypal-fill"></i>
+                        </div>
+                    </div>
+                    <div id="payment-details">
+                        <div class="card-details">
+                            <div class="form-group full-width">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="xxxx xxxx xxxx xxxx" required>
+                            </div>
+                            <div class="card-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Expiry Date</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvc">CVC</label>
+                                    <input type="text" id="card-cvc" placeholder="123" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="step-navigation">
+                    <button type="button" class="btn prev-btn">Previous</button>
+                    <button type="button" class="btn next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privatepolicy.html">Privacy Policy</a></li>
+                    <li><a href="DMCApolicy">DMCA Policy</a></li>
+                    <li><a href="terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>GYMS</h3>
+                <ul>
+                    <li><a href="FindAGym.html">Find A Gym</a></li>
+                    <li><a href="#">View All Gyms</a></li>
+                    <li><a href="franchise.html">Own A Gym</a></li>
+                    <li><a href="#">Franchise Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>MEMBERS</h3>
+                <ul>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="member.html">Member Login</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">Copyright © 2025 NEW ERA FITNESS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/membershipbuy.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/JoinUsNow!.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Join Us Now! | New Era Fitness</title>
+
+  
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav_logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <ul class="nav_links">
+            <li class="link"><a href="membership.html">MEMBERSHIP</a></li>
+            <li class="link"><a href="personaltraining.html">PERSONAL TRAINING</a></li>
+            <li class="link"><a href="classes.html">CLASSES</a></li>
+            <li class="link"><a href="employeewellness.html">EMPLOYEE WELLNESS</a></li>
+            <li class="link"><a href="franchise.html">OWN A GYM</a></li>
+        </ul>
+        <a href="JoinUsNow.html" class="btn">Join Us Now!</a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </nav>
+
+    <!-- Main Content: Multi-Step Form -->
+    <main class="multi-step-container">
+        <div class="step-container">
+
+            <!-- Step 1: Find a Gym -->
+            <div id="step-1" class="form-step active">
+                <h4>STEP 1 OF 3</h4>
+                <h2>Find A Gym</h2>
+                <p>Find your gym & receive your free 3-day pass! Start by searching by city, suburb or zip code.</p>
+                
+                <form id="search-form">
+                    <label for="location-search" class="sr-only">Search by Suburb, Town or City</label>
+                    <div class="search-group">
+                        <input type="text" id="location-search" placeholder="Search by Suburb, Town or City">
+                        <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="#" id="current-location-link" class="current-location-link"><i class="fas fa-map-marker-alt"></i> Use Current Location</a>
+                </form>
+                
+                <button class="btn" id="step-1-next-btn">NEXT</button>
+            </div>
+
+            <!-- Step 2: Choose Your Gym -->
+            <div id="step-2" class="form-step">
+                <h4>STEP 2 OF 3</h4>
+                <h2>Choose Your Gym</h2>
+                <p>Select one of these top locations near you:</p>
+
+                <ul id="gym-list" class="gym-list">
+                    <!-- Gym results will be dynamically inserted here -->
+                </ul>
+                <div id="no-results-message" style="display: none;">
+                    <p>No gyms found for your search. Please try a different location.</p>
+                </div>
+                <a href="#" class="back-btn" data-prev="step-1">GO BACK</a>
+            </div>
+
+            <!-- Step 3: Get Your Pass -->
+            <div id="step-3" class="form-step">
+                <!-- This div will be hidden on success -->
+                <div id="step-3-form-content">
+                     <h4>STEP 3 OF 3</h4>
+                     <h2>Free 3-Day Pass</h2>
+                     
+                     <div id="selected-gym-info">
+                        <!-- Selected gym info will be dynamically inserted here -->
+                     </div>
+
+                     <p>Take some time to get to know New Era Fitness. The pass is FREE, and we would love to show you around.</p>
+
+                     <form id="pass-form" class="pass-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="zip-code">Zip Code*</label>
+                            <input type="text" id="zip-code" required>
+                        </div>
+                        <p class="terms-text">*Pass is valid for local residents only. Must be 18 years or older. All guests must show a valid local ID. Not redeemable for cash. By providing your contact information, you consent to be contacted by New Era Fitness, LLC, its affiliates, master franchisees and/or its franchisees and their authorized designees, through email, telephone, text message, or by other means, some of which may be from an automated service, as well as any other communications described in our Privacy Policy, which can be found at: https://www.newerafitness.com/privacy. For mobile messaging, message and data rates may apply and you will be sent a text message to confirm your desire to receive mobile messages. We do not sell your personal information.</p>
+                        
+                        <div class="step-nav">
+                             <a href="#" class="back-btn" data-prev="step-2">GO BACK</a>
+                             <button type="submit" class="btn">GET MY FREE PASS</button>
+                        </div>
+                     </form>
+                </div>
+
+                <!-- This div will be shown on success -->
+                <div id="step-3-success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Success!</h2>
+                    <p >Your free pass is on its way. Please check your email for details.</p>
+                   <a href="index.html" class="btn">Back to Mainpage</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privatepolicy.html">Privacy Policy</a></li>
+                    <li><a href="DMCApolicy.html">DMCA Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>GYMS</h3>
+                <ul>
+                    <li><a href="findAgym.html">Find A Gym</a></li>
+                    <li><a href="#">View All Gyms</a></li>
+                    <li><a href="franchise.html">Own A Gym</a></li>
+                    <li><a href="#">Franchise Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>MEMBERS</h3>
+                <ul>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="member.html">Member Login</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">Copyright © 2025 NEW ERA FITNESS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="script/JoinUsNow.js"></script>
+</body>
+</html>

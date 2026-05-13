@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/contact(EW).css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Employee Wellness Contact | New Era Fitness</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav_logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            <ul class="nav_links">
+                <li class="link"><a href="membership.html">MEMBERSHIP</a></li>
+                <li class="link"><a href="personaltraining.html">PERSONAL TRAINING</a></li>
+                <li class="link"><a href="classes.html">CLASSES</a></li>
+                <li class="link"><a href="employeewellness.html">EMPLOYEE WELLNESS</a></li>
+                <li class="link"><a href="franchise.html">OWN A GYM</a></li>
+            </ul>
+            <a href="JoinUsNow.html" class="btn">Join Us Now!</a>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </nav>
+
+      <main>
+        <div class="main-content-padding">
+            <div class="form-container">
+                <!-- Form Wrapper -->
+                <div id="form-wrapper">
+                    <h1>Contact Our Employee Wellness Team</h1>
+                    <form id="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company*</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country*</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="employees">Number of Employees*</label>
+                            <input type="number" id="employees" name="employees" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry*</label>
+                            <select id="industry" name="industry" required>
+                                <option value="" disabled selected>SELECT...</option>
+                                <option value="tech">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="health">Healthcare</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea id="comments" name="comments" rows="4"></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-btn">SUBMIT <i class="fas fa-arrow-right"></i></button>
+                            <a href="employeewellness.html" class="cancel-btn">CANCEL</a>
+                        </div>
+                    </form>
+                </div>
+                <!-- Success Message -->
+                <div id="success-message" class="success-message" style="display: none;">
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Thank You!</h2>
+                    <p>Your message has been sent. Please check your email for our response.</p>
+                    <a href="index.html" class="btn">Back to Main Page</a>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privatepolicy.html">Privacy Policy</a></li>
+                    <li><a href="DMCApolicy.html">DMCA Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>GYMS</h3>
+                <ul>
+                    <li><a href="FindAGym.html">Find A Gym</a></li>
+                    <li><a href="#">View All Gyms</a></li>
+                    <li><a href="franchise.html">Own A Gym</a></li>
+                    <li><a href="#">Franchise Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>MEMBERS</h3>
+                <ul>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="member.html">Member Login</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-info">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="copyright">Copyright © 2025 NEW ERA FITNESS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="script/contact(EW).js"></script>
+</body>
+</html>

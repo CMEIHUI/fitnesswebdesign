@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Correct path to your CSS file -->
+    <link rel="stylesheet" href="css/memberlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Using a placeholder for the icon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Member | New Era Fitness</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="New Era Fitness Logo">
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <button data-slide="0" class="sidebar-btn active"><i class="fas fa-user"></i><span>Profile</span></button>
+                <button data-slide="1" class="sidebar-btn"><i class="fas fa-id-card"></i><span>Member Status</span></button>
+                <button data-slide="2" class="sidebar-btn"><i class="fas fa-dumbbell"></i><span>Workout Logs</span></button>
+                <button data-slide="3" class="sidebar-btn"><i class="fas fa-envelope"></i><span>Messages</span></button>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></button>
+            </div>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <header class="main-header">
+                <button id="menu-toggle" class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+                <h2>Welcome back, Yu Shun!</h2>
+            </header>
+
+            <!-- Slides/Tabs for content -->
+            <div class="slides-wrapper">
+                <!-- Profile Slide -->
+                <div class="slide active" data-slide-content="0">
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <img src="https://placehold.co/150x150/f9ac54/111317?text=M" alt="User Avatar" class="profile-avatar">
+                            <h3>Member Name: Yu Shun</h3>
+                            <p>Member ID: 666666</p>
+                            <button class="btn">Edit Profile</button>
+                        </div>
+                        <div class="profile-details">
+                            <h4>Account Details</h4>
+                            <div class="details-grid">
+                                <div><label>Gender:</label><span> Male</span></div>
+                                <div><label>Age:</label><span> 18</span></div>
+                                <div><label>Contact:</label><span>+60 12-345 6789</span></div>
+                                <div><label>Email: </label><span>member@example.com</span></div>
+                                <div class="address-field"><label>Address:</label><span>123, Jalan Gym, 43000 Kajang, Selangor</span></div>
+                            </div>
+                            <h4>Change Password</h4>
+                            <form class="password-form">
+                                <input type="password" placeholder="New Password">
+                                <input type="password" placeholder="Confirm New Password">
+                                <button type="submit" class="btn">Update Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Status Slide -->
+                <div class="slide" data-slide-content="1">
+                    <h3>Membership Status</h3>
+                    <div class="status-grid">
+                        <div class="status-card">
+                            <i class="fas fa-star"></i>
+                            <h4>Membership Level</h4>
+                            <p>Premium Pro</p>
+                        </div>
+                        <div class="status-card">
+                            <i class="fas fa-calendar-times"></i>
+                            <h4>Expires On</h4>
+                            <p>September 28, 2025</p>
+                        </div>
+                         <div class="status-card">
+                            <i class="fas fa-coins"></i>
+                            <h4>Points Earned</h4>
+                            <p>10,000</p>
+                        </div>
+                    </div>
+                     <div class="action-buttons">
+                        <button class="btn">Renewal Options</button>
+                        <button class="btn">Billing History</button>
+                        <button class="btn btn-danger">Cancel Membership</button>
+                    </div>
+                </div>
+
+                <!-- Workout Logs Slide -->
+                <div class="slide" data-slide-content="2">
+                    <div class="slide-header">
+                        <h3>Workout Logs</h3>
+                        <button class="btn">Book A Class</button>
+                    </div>
+                    <div class="log-list">
+                        <div class="log-item">
+                            <img src="https://placehold.co/80x80/f9ac54/111317?text=Yoga" alt="Yoga">
+                            <div class="log-details">
+                                <h4>Yoga with Anina</h4>
+                                <p><i class="fas fa-calendar-alt"></i> August 16, 2025</p>
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                            </div>
+                            <span class="points">+120 pts</span>
+                        </div>
+                         <div class="log-item">
+                            <img src="https://placehold.co/80x80/f9ac54/111317?text=Box" alt="Boxing">
+                            <div class="log-details">
+                                <h4>Boxing with Jayden</h4>
+                                <p><i class="fas fa-calendar-alt"></i> August 17, 2025</p>
+                                <p><i class="fas fa-clock"></i> 4:00 PM - 7:00 PM</p>
+                            </div>
+                            <span class="points">+180 pts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages Slide -->
+                <div class="slide" data-slide-content="3">
+                    <h3>Notifications</h3>
+                    <div class="message-list">
+                        <div class="message-item">
+                            <i class="fas fa-tag"></i>
+                            <div class="message-content">
+                                <h4>Huge Promotion!</h4>
+                                <p>Don't miss out on our 90% discount for early birds!...</p>
+                                <span>3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="message-content">
+                                <h4>Class Booking Confirmed</h4>
+                                <p>You have successfully booked a Boxing class with Jayden...</p>
+                                 <span>3 days ago</span>
+                            </div>
+                        </div>
+                         <div class="message-item">
+                            <i class="fas fa-user-plus"></i>
+                            <div class="message-content">
+                                <h4>Welcome to New Era Fitness!</h4>
+                                <p>Congratulations on signing up for your new membership...</p>
+                                 <span>5 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Logout Modal -->
+    <div class="modal-overlay" id="logoutModal">
+        <div class="modal">
+            <h3>Do you want to log out?</h3>
+            <div class="modal-buttons">
+                <button class="btn" id="confirm-logout-btn">Yes</button>
+                <button class="btn btn-secondary" id="cancel-logout-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Correct path to your JS file -->
+    <script src="script/memberlogin.js"></script>
+</body>
+</html>
