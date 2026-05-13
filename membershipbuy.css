@@ -1,0 +1,492 @@
+
+/* --- CSS Variables from frame.css --- */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+
+:root {
+    --primary-color: #111317;
+    --primary-color-light: #1f2125;
+    --primary-color-extra-light: #35373b;
+    --secondary-color: #f9ac54;
+    --secondary-color-dark: #d79447;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --dark-text: #333;
+    --max-width: 1200px;
+    --step-icon-bg: #35373b;
+    --step-icon-active-bg: var(--secondary-color);
+    --step-line-color: #35373b;
+}
+
+/* --- Base Styles & Resets --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* --- Utility & Container Classes --- */
+.container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color-dark);
+}
+        
+.btn:disabled {
+    background-color: var(--primary-color-extra-light);
+    cursor: not-allowed;
+}
+
+/* --- Nav Bar (from frame.css) --- */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-color-light);
+}
+.nav-container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav_logo {
+    max-width: 150px;
+}
+        
+.nav_logo img {
+    max-height: 150px;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.link a:hover::after {
+    width: 50%;
+}
+
+#menu-btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
+
+/* --- Main Content Area --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.purchase-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* --- Stepper Progress Bar --- */
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.stepper-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--step-line-color);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.stepper-line-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%; 
+    background-color: var(--secondary-color);
+    transition: width 0.4s ease;
+}
+.stepper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+.step-counter {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: var(--step-icon-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--step-line-color);
+    transition: all 0.4s ease;
+}
+.stepper-item.active .step-counter {
+    background: var(--step-icon-active-bg);
+    border-color: var(--step-icon-active-bg);
+    color: var(--white);
+}
+.stepper-item.completed .step-counter {
+    background: var(--step-icon-active-bg);
+    border-color: var(--step-icon-active-bg);
+    color: var(--white);
+    font-size: 1.8rem;
+}
+.step-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+.stepper-item.active .step-name {
+    color: var(--secondary-color);
+}
+
+/* --- Form Steps --- */
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+.form-step.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.step-header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.step-header span {
+    color: var(--secondary-color);
+}
+
+/* Step 1: Location */
+        .location-search {
+            margin-bottom: 1.5rem;
+        }
+        .location-search input {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color-light);
+            border: 1px solid var(--primary-color-extra-light);
+            border-radius: 5px;
+            color: var(--white);
+            font-size: 1rem;
+        }
+        .location-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px; /* for scrollbar */
+        }
+        .location-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: var(--primary-color-light);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .location-item:hover {
+            border-color: var(--secondary-color-dark);
+        }
+        .location-item.selected {
+            border-color: var(--secondary-color);
+            background-color: var(--primary-color-extra-light);
+        }
+        .location-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        .location-details p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .location-item .btn {
+            padding: 0.8rem 1.5rem;
+        }
+
+        /* Step 2: Plan Selection */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .plan-card {
+            background-color: var(--primary-color-light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color-dark);
+        }
+        .plan-card.selected {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 15px rgba(249, 172, 84, 0.3);
+        }
+        .plan-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        .plan-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            color: var(--text-light);
+        }
+        .plan-features li {
+            margin-bottom: 0.75rem;
+        }
+        .plan-features i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Step 3: Details Form */
+        .details-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .form-group input {
+            padding: 0.8rem 1rem;
+            background-color: var(--primary-color-light);
+            border: 1px solid var(--primary-color-extra-light);
+            border-radius: 5px;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        /* Step 4: Payment */
+        .payment-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .payment-option {
+            padding: 1rem 2rem;
+            background-color: var(--primary-color-light);
+            border: 2px solid var(--primary-color-extra-light);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        .payment-option.selected {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+        #payment-details {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .card-details {
+            background-color: var(--primary-color-light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .card-row {
+            display: flex;
+            gap: 1rem;
+        }
+        .card-row .form-group {
+            flex: 1;
+        }
+        
+        /* --- Navigation Buttons --- */
+        .step-navigation {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .prev-btn {
+            background-color: var(--primary-color-extra-light);
+        }
+        .prev-btn:hover {
+            background-color: #4a4d52;
+        }
+
+        /* --- Footer (from frame.css) --- */
+        footer { 
+            background-color: var(--primary-color); 
+            padding: 40px 20px;
+            margin-top: auto;
+            border-top: 1px solid var(--primary-color-light);
+        }
+        .footer-container { 
+            max-width: var(--max-width); 
+            margin: auto;
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            gap: 30px; 
+        }
+        .footer-column { 
+            flex: 1; 
+            min-width: 200px; 
+        }
+        .footer-column h3 {
+            color: var(--secondary-color); 
+            margin-bottom: 10px; 
+            font-size: 18px; 
+        }
+        .footer-column ul { 
+            list-style: none; 
+        }
+        .footer-column ul li {
+            margin-bottom: 8px; 
+        }
+        .footer-column ul li a:hover {
+            color: var(--secondary-color-dark); 
+        }
+        .footer-info { 
+            text-align: right;
+        }
+        .social-icons { 
+            display: flex;
+            gap: 15px; 
+            justify-content: flex-end; 
+        }
+        .social-icons a {
+            font-size: 20px; 
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--secondary-color); 
+            transform: scale(1.2);
+        }
+        .copyright { 
+            margin-top: 20px; 
+            font-size: 12px; 
+            color: var(--text-light); 
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 900px) {
+            #menu-btn { display: block; }
+            nav .btn { display: none; }
+            .nav_links { position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; background-color: var(--primary-color-light); flex-direction: column; justify-content: center; gap: 2rem; z-index: 1000; transition: left 0.3s; }
+            .nav_links.active { left: 0; }
+            .details-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: auto; }
+        }
+        
+        @media (max-width: 768px) {
+            .step-name { display: none; }
+            .step-counter { height: 50px; width: 50px; font-size: 1.2rem;}
+        }
+
+        @media (max-width: 600px) {
+            .footer-container { flex-direction: column; text-align: center; }
+            .footer-info { text-align: center; }
+            .social-icons { justify-content: center; }
+            .card-row { flex-direction: column; gap: 0; }
+        }
